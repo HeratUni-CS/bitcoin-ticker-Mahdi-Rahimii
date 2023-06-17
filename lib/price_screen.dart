@@ -72,7 +72,7 @@ class _PriceScreenState extends State<PriceScreen> {
                 BackgroundColor: Colors.LightBlue,
                 ItemExtent: 32.4,
                 onselectedItemChange: (selectedIndex) {},
-                childern: null,
+                childern: getPickerItems(),
               )),
         ],
       ),
