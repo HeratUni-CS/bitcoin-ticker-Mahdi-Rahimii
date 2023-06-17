@@ -23,11 +23,12 @@ class _PriceScreenState extends State<PriceScreen> {
     return DropdownItems;
   }
 
-  List<Widget> getPickerItems() {
+  List<Text> getPickerItems() {
     List<Text> pickerItems = [];
     for (String currency in currenciesList) {
       Text(currency);
     }
+    return pickerItems;
   }
 
   @override
