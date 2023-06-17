@@ -10,11 +10,14 @@ class PriceScreen extends StatefulWidget {
 
 class _PriceScreenState extends State<PriceScreen> {
   String selectedCurrency = 'USD';
-  void getDropdownItems (){
+  List<DropdownMenItems> getDropdownItems (){
+    List<DropdwonMenuItems<String>> DropdownItems = [];
     for(int i=0; i<currenciesList.length; i++){
       String currency = currenciesList[i];
-      DropdownMenuItems(child: Text(currency), value:currency,);
+    var newItem =  DropdownMenuItems(child: Text(currency), value:currency,);
     }
+    DropdownItems.add(newItems);
+    return DropdownItems;
   }
 
   @override
@@ -56,24 +59,7 @@ class _PriceScreenState extends State<PriceScreen> {
             color: Colors.lightBlue,
             child: DropdoenButton<String>(
                 value: selectedCurrency,
-                items: [
-                  DropdownMenuItem(
-                    child: Text('USD'),
-                    value: 'USD',
-                  ),
-                  DropdownMenuItem(
-                    child: Text('ERUO'),
-                    value: 'ERUO',
-                  ),
-                  DropdownMenuItem(
-                    child: Text('YAN'),
-                    value: 'YAN',
-                  ),
-                  DropdownMenuItem(
-                    child: Text('AFG'),
-                    value: 'AFG',
-                  ),
-                ],
+                items: getDropdownItems(),
                 onchange: (value) {
                   setState(() {selectedCurrency = value});
                 }),
