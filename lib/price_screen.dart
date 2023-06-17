@@ -44,24 +44,29 @@ class _PriceScreenState extends State<PriceScreen> {
             alignment: Alignment.center,
             padding: const EdgeInsets.only(bottom: 30.0),
             color: Colors.lightBlue,
-            child: DropdoenButton<String>(items: [
-              DropdownMenuItem(
-                child: Text('USD'),
+            child: DropdoenButton<String>(
                 value: 'USD',
-              ),
-              DropdownMenuItem(
-                child: Text('ERUO'),
-                value: 'ERUO',
-              ),
-              DropdownMenuItem(
-                child: Text('YAN'),
-                value: 'YAN',
-              ),
-              DropdownMenuItem(
-                child: Text('AFG'),
-                value: 'AFG',
-              ),
-            ], onchange: null),
+                items: [
+                  DropdownMenuItem(
+                    child: Text('USD'),
+                    value: 'USD',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('ERUO'),
+                    value: 'ERUO',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('YAN'),
+                    value: 'YAN',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('AFG'),
+                    value: 'AFG',
+                  ),
+                ],
+                onchange: (value) {
+                  print(value);
+                }),
           ),
         ],
       ),
